@@ -5,9 +5,10 @@
 ### Create Symbol link
 
 ```shell
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
+ln -s ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/dotfiles/.zprofile ~/.zprofile
+ln -s ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/dotfiles/.p10k.zsh  ~/.p10k.zsh
 ```
 
 ### Remove dock lag (2 monitors)

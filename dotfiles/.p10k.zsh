@@ -1,0 +1,1 @@
+/Users/jota/.p10k.zsh
