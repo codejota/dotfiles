@@ -1,10 +1,13 @@
 # dotfiles
 
-### Criar links simbolicos
+## This is my first experience with macOS and also configuring dotfiles
+
+### Create Symbol link
 
 ```shell
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
 ```
 
 ### Remove dock lag (2 monitors)
@@ -21,12 +24,6 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jota/.profile && eval
 brew bundle --file ~/.dotfiles/Brewfile
 ```
 
-### Install node
-
-```shell
-brew install node
-```
-
 ### Oh My Zsh
 
 ```shell
@@ -40,9 +37,6 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ```
-
-brew install --cask font-powerline-symbols
-rew install wget
 
 ## How to extract current installed files?
 
