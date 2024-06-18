@@ -69,7 +69,7 @@ CASKS=(
   arc
   bitwarden
   whatsapp
-
+  asdf
 )
 
 for app in ${CASKS[@]}
