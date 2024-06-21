@@ -14,6 +14,16 @@ osascript -e 'tell application "System Preferences" to quit'
 # General UI/UX                                                               #
 ###############################################################################
 defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+defaults write com.apple.finder "ShowPathbar" -bool "true" 
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
+defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1" && killall Finder
+defaults write com.apple.finder "CreateDesktop" -bool "false" && killall Finder
+defaults write com.apple.finder ShowStatusBar -bool true  
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/$USER"
+defaults write ~/Library/Preferences/com.apple.HIToolbox.plist AppleEnabledInputSources -array-add '{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = "com.apple.keylayout.US"; "KeyboardLayout Name" = "U.S. International - PC"; }'
+defaults write ~/Library/Preferences/com.apple.HIToolbox.plist AppleEnabledInputSources -array-add '{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = "com.apple.keylayout.BrazilianABNT2"; "KeyboardLayout Name" = "Portuguese - Brazil"; }'
+sudo rm ~/Library/Preferences/com.apple.HIToolbox.plist && killall Finder && cfprefsd
+
 
 
 # Set computer name (as done via System Preferences → Sharing)
@@ -123,11 +133,6 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder: don't show status bar
-defaults write com.apple.finder ShowStatusBar -bool false
-
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
 
 # Don't display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
@@ -181,25 +186,6 @@ defaults write com.apple.dock show-recents -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
-
-
-
-###############################################################################
-# Terminal
-###############################################################################
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-# Enable Secure Keyboard Entry in Terminal.app
-# See: https://security.stackexchange.com/a/47786/8918
-defaults write com.apple.terminal SecureKeyboardEntry -bool true
-
-# Disable the annoying line marks
-defaults write com.apple.Terminal ShowLineMarks -int 0
-
-# Hide scrollbars in Terminal
-defaults write com.apple.Terminal AppleShowScrollBars -string "Automatic"
 
 
 ###############################################################################

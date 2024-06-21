@@ -2,15 +2,6 @@
 
 ## This is my first experience with macOS and also configuring dotfiles
 
-### Create Symbol link
-
-```shell
-ln -s ~/.dotfiles/dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/dotfiles/.zprofile ~/.zprofile
-ln -s ~/.dotfiles/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/dotfiles/.p10k.zsh  ~/.p10k.zsh
-```
-
 # macOS Dotfiles
 
 This is a simple and flexible dotfiles and scripts to setup _macOS_.
@@ -64,7 +55,6 @@ _Check linked files to more details._
 
 ```bash
 git clone git@github.com:codejota/dotfiles.git && cd dotfiles
-
 ./setup.sh
 ```
 
@@ -84,7 +74,7 @@ It will then install the following scripts, in this order:
 - [apps.sh][] - install _Homebrew_, _Homebrew Cask Upgrade_ and applications.
 
   - Install [Homebrew][].
-  - Homebrew formulas: [curl][], [Git][], [Nano][], [Node][], [PostgreSQL][], [Python][], [Ruby][], [Tree][], [Yarn][], [Zsh][].
+  - Homebrew formulas: [curl][], [Git][], [Node][], [PostgreSQL][], [Python][], [Ruby][], [Zsh][].
   - Homebrew taps: [homebrew/fonts][], [homebrew/drivers][], [homebrew/versions][], [homebrew/command-not-found][].
   - Homebrew casks: [JetBrains Mono][] and [Visual Studio Code][]. and others, check file.
   - Install [Homebrew Cask Upgrade][].
@@ -124,12 +114,8 @@ It will then install the following scripts, in this order:
 - [Oh My Zsh][]
 
 [.gitignore_global]: configs/gitignore_global
-[.zshrc_intel]: configs/.zshrc_intel
-[.zshrc_silicon]: configs/.zshrc_silicon
 [apps.sh]: scripts/apps.sh
 [asdf]: https://asdf-vm.com
-[awesome dotfiles]: https://github.com/webpro/awesome-dotfiles
-[awesome osx command line]: https://github.com/herrbischoff/awesome-osx-command-line
 [curl]: https://curl.haxx.se
 [dock.sh]: scripts/dock.sh
 [dockutil]: https://github.com/kcrawford/dockutil
@@ -145,7 +131,6 @@ It will then install the following scripts, in this order:
 [homebrew/fonts]: https://github.com/Homebrew/homebrew-cask-fonts
 [homebrew/versions]: https://github.com/Homebrew/homebrew-cask-versions
 [hostname.sh]: scripts/hostname.sh
-[iina]: https://iina.io/
 [installation]: #installation
 [jetbrains mono]: https://jetbrains.com/mono
 [macos.sh]: scripts/macos.sh
@@ -155,13 +140,9 @@ It will then install the following scripts, in this order:
 [npm.sh]: scripts/npm.sh
 [oh my zsh]: https://ohmyz.sh
 [postgresql]: https://www.postgresql.org
-[postman]: https://www.postman.com
-[python]: https://www.python.org
 [release]: https://github.com/samuelramox/dotfiles/releases
 [resources]: #resources
 [ruby]: https://www.ruby-lang.org/
-[sensible macos defaults]: https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-[settings sync]: https://code.visualstudio.com/docs/editor/settings-sync
 [setup.sh]: scripts/setup.sh
 [starship]: https://starship.rs
 [starship.toml]: configs/starship.toml

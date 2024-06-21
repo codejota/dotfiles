@@ -16,6 +16,7 @@ dockutil --no-restart --add "/System/Applications/Obsidian.app"
 dockutil --no-restart --add "/Applications/Arc.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 dockutil --no-restart --add "/Applications/Warp.app"
+dockutil --no-restart --add "/Users/$USER/Downloads" --view list --display stack --sort dateadded
 
 killall Dock
 

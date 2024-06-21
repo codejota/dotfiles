@@ -7,6 +7,31 @@ source ./scripts/utils.sh
 
 echo_info "Installing dotfiles..."
 
+# Define the source directory (dotfiles)
+SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../dotfiles" && pwd)"
+
+# Define the target directories
+DOTFILES_DIR="$HOME/.dotfiles"
+HOME_DIR="$HOME"
+
+# Create the target directory if it doesn't exist
+mkdir -p "$DOTFILES_DIR"
+
+# Loop through each file in the source directory and create a symlink in the target directories
+for file in "$SOURCE_DIR"/.* "$SOURCE_DIR"/*; do
+  # Skip directories and the special '.' and '..' entries
+  [ -f "$file" ] || continue
+  filename=$(basename "$file")
+  
+  # Create symlink in ~/.dotfiles
+  ln -sf "$file" "$DOTFILES_DIR/$filename"
+  
+  # Create symlink in home directory
+  ln -sf "$file" "$HOME_DIR/$filename"
+done
+
+echo_success "Dotfiles installed in $DOTFILES_DIR and $HOME_DIR"
+
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -19,11 +44,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Move permanent files to Home directory
 replace "./configs/.gitignore_global" ".gitignore_global"
 
-if [[ `uname -p` == "arm" ]]; then
-  replace "./configs/.zshrc_silicon" ".zshrc"
-else
-  replace "./configs/.zshrc_intel" ".zshrc"
-fi
+
 
 # Git configs
 git config --global user.name "$GIT_NAME"
