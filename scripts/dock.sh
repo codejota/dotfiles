@@ -11,12 +11,12 @@ echo_info "Setting Dock..."
 # Install dockutil
 # brew install dockutil
 # Temporary fix:
-brew install hpedrorodrigues/tools/dockutil
+brew install dockutil
 
 # Dock settings
 dockutil --no-restart --remove all
-dockutil --no-restart --add "System/Applications/finder.app"
 dockutil --no-restart --add "/System/Applications/Launchpad.app"
+dockutil --no-restart --add "/System/Applications/Obsidian.app"
 dockutil --no-restart --add "/Applications/Arc.app"
 dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 dockutil --no-restart --add "/Applications/Warp.app"

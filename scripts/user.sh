@@ -5,10 +5,10 @@
 # If you don't put the data in now, you'll need to configure .gitconfig and SSH later
 
 # User variables
-GIT_NAME=""
+GIT_NAME="codejota"
 GIT_EMAIL=""
 SSH_EMAIL=""
-HOSTNAME=""
+HOSTNAME="jota"
 
 # Guidance
 # - GIT_NAME: name and surname to use in Git settings.

@@ -40,6 +40,9 @@ FORMULAS=(
   zsh
   gh
   wget
+  powerlevel10k
+  coreutils
+  asdf
 )
 
 for formula in ${FORMULAS[@]}
@@ -69,7 +72,8 @@ CASKS=(
   arc
   bitwarden
   whatsapp
-  asdf
+  docker
+  stats
 )
 
 for app in ${CASKS[@]}
