@@ -32,3 +32,4 @@ echo_warning() {
 replace() {
   cp -f "${DOTFILES_DIRECTORY}/${1}" "${HOME}/${2}"
 }
+.

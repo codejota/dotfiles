@@ -39,9 +39,7 @@ mkdir ${HOME}/dev
 # Cleanup cached downloads and remove the installation zip and folder
 echo_info "Removing unnecessary files."
 brew cleanup
-rm -rf ${HOME}/dotfiles.tar.gz
-rm -rf ${HOME}/dotfiles.zip
-rm -rf ${DOTFILES_DIRECTORY}
+
 
 # Finish
 echo_success "Reboot and enjoy!"

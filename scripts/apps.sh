@@ -55,6 +55,7 @@ CASKS=(
   font-jetbrains-mono
   visual-studio-code
   discord
+  alt-tab
   steam
   warp
   maccy
