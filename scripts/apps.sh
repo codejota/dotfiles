@@ -18,6 +18,27 @@ fi
 brew update
 brew upgrade
 
+echo_info "Installing asdf, ruby and Node..."
+git clone https://github.com/excid3/asdf.git ~/.asdf
+echo '. "$HOME/.asdf/asdf.sh"' >> ~/.zshrc 
+echo '. "$HOME/.asdf/completions/asdf.bash"' >> ~/.zshrc 
+echo 'legacy_version_file = yes' >> ~/.asdfrc 
+exec $SHELL
+
+brew install libyaml 
+asdf plugin add ruby 
+asdf plugin add nodejs
+
+asdf install ruby 3.3.3
+asdf global ruby 3.3.3 
+gem update --system
+
+asdf install nodejs
+asdf global nodejs 
+
+gem install rails
+rails -v
+
 # Install Homebrew taps
 TAPS=(
   homebrew/cask-fonts
@@ -34,15 +55,13 @@ done
 FORMULAS=(
   curl
   git
-  node
   postgresql
-  ruby
   zsh
   gh
   wget
   powerlevel10k
   coreutils
-  asdf
+  dockutil
 )
 
 for formula in ${FORMULAS[@]}
@@ -75,6 +94,7 @@ CASKS=(
   whatsapp
   docker
   stats
+  
 )
 
 for app in ${CASKS[@]}

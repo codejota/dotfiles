@@ -1,1 +1,2 @@
-/Users/jota/.zp10k.zsh
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

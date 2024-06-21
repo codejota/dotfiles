@@ -8,11 +8,7 @@ source ./scripts/utils.sh
 
 echo_info "Setting Dock..."
 
-# Install dockutil
-# brew install dockutil
-# Temporary fix:
-brew install dockutil
-
+ 
 # Dock settings
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/System/Applications/Launchpad.app"
