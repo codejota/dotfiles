@@ -91,3 +91,6 @@ alias zshcfg="code ~/.zshrc"
 
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+
+
+PATH=~/.console-ninja/.bin:$PATH
