@@ -33,6 +33,7 @@ plugins=(
     zsh-completions 
     zsh-history-substring-search 
     zsh-syntax-highlighting
+    zsh-navigation-tools
 )
 
 # Homebrew Command Not Found
@@ -49,10 +50,11 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # --------------------------- Theme ------------------------------------
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="spaceship"
+  source $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme
 
-
-source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -94,3 +96,35 @@ alias zshcfg="code ~/.zshrc"
 
 
 PATH=~/.console-ninja/.bin:$PATH
+
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  hg            # Mercurial section (hg_branch  + hg_status)
+  exec_time     # Execution time
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+  line_sep      # Line break
+  node          # Node.js section
+  docker        # Docker section
+)
+
+SPACESHIP_USER_SHOW=always
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_USER_SHOW=always
+SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_DIR_TRUNC=1
+SPACESHIP_DIR_FIRST=false
+SPACESHIP_RUBY_SUFFIX="❯"
+SPACESHIP_RUBY_COLOR="red"
+SPACESHIP_NODE_SHOW=true
+SPACESHIP_NODE_SUFFIX=" ➜ "
+SPACESHIP_NODE_PREFIX=""
+SPACESHIP_NODE_COLOR="green"
+
+export SPACESHIP_CONFIG="$HOME/.dotfiles/spaceship/spaceship.zsh"
