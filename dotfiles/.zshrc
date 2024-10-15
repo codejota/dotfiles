@@ -128,3 +128,7 @@ SPACESHIP_NODE_PREFIX=""
 SPACESHIP_NODE_COLOR="green"
 
 export SPACESHIP_CONFIG="$HOME/.dotfiles/spaceship/spaceship.zsh"
+export PATH=$PATH:/Library/PostgreSQL/17/bin
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/opt/python@3.12/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.12/bin:$PATH"

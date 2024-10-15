@@ -62,6 +62,58 @@ FORMULAS=(
   powerlevel10k
   coreutils
   dockutil
+  asdf
+  autoconf
+  automake
+  brotli
+  c-ares
+  ca-certificates
+  cjson
+  coreutils
+  curl
+  dockutil
+  gettext
+  gh
+  git
+  gmp
+  icu4c
+  krb5
+  libevent
+  libidn2
+  libnghttp2
+  libssh2
+  libtool
+  libunistring
+  libuv
+  libwebsockets
+  libyaml
+  lz4
+  m4
+  mosquitto
+  mpdecimal
+  ncurses
+  node
+  openssl@3
+  pcre
+  pcre2
+  pkg-config
+  pnpm
+  postgresql@14
+  postgresql@17
+  powerlevel10k
+  pyenv
+  python@3.12
+  python-tk@3.12
+  readline
+  redis
+  ruby
+  sqlite
+  tcl-tk
+  tree
+  unixodbc
+  wget
+  xz
+  zsh
 )
 
 for formula in ${FORMULAS[@]}
@@ -71,29 +123,33 @@ done
 
 # Install Homebrew casks
 CASKS=(
-  font-jetbrains-mono
-  visual-studio-code
-  discord
   alt-tab
-  steam
-  warp
-  maccy
-  soundsource
-  xnip
-  github
-  displaylink
-  obsidian
-  dozer
-  rectangle
-  raycast
-  ticktick
-  keka
-  keepingyouawake
   arc
   bitwarden
-  whatsapp
+  discord
+  displaylink
   docker
+  dozer
+  font-jetbrains-mono
+  github
+  keepingyouawake
+  keka
+  maccy
+  obsidian
+  omnidisksweeper
+  pictogram
+  popsql
+  postman
+  raycast
+  rectangle
+  replacicon
+  soundsource
   stats
+  steam
+  ticktick
+  visual-studio-code
+  warp
+  whatsapp
   
 )
 
