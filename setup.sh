@@ -2,6 +2,7 @@
 #
 # mascOS setup script
 # Main install script
+echo_info "Hello $(whoami)! Let's get started with your macOS setup."
 
 source ./scripts/utils.sh
 

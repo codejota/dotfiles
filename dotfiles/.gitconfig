@@ -5,7 +5,7 @@
 	clean = git-lfs clean -- %f
 [user]
 	name = codejota
-	email = contato@jotacode.dev
+	email = 
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -98,7 +98,7 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -117,6 +117,7 @@
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
+	editor = code --wait
 
 [color]
 
@@ -152,6 +153,7 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	tool = vscode
 
 [diff "bin"]
 
@@ -167,6 +169,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = vscode
 
 [push]
 
@@ -200,4 +203,14 @@
 [init]
 
 	templateDir = ~/.config/git/template/
+	defaultBranch = main
 
+[credential]
+	helper = osxkeychain
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[oh-my-zsh]
+	hide-dirty = 1
+	hide-status = 1

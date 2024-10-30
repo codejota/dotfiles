@@ -8,7 +8,7 @@
 GIT_NAME="codejota"
 GIT_EMAIL=""
 SSH_EMAIL=""
-HOSTNAME="jota"
+HOSTNAME="jota-mac"
 
 # Guidance
 # - GIT_NAME: name and surname to use in Git settings.

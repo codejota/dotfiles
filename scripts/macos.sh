@@ -20,9 +20,7 @@ defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1" && killall F
 defaults write com.apple.finder "CreateDesktop" -bool "false" && killall Finder
 defaults write com.apple.finder ShowStatusBar -bool true  
 defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/$USER"
-defaults write ~/Library/Preferences/com.apple.HIToolbox.plist AppleEnabledInputSources -array-add '{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = "com.apple.keylayout.US"; "KeyboardLayout Name" = "U.S. International - PC"; }'
-defaults write ~/Library/Preferences/com.apple.HIToolbox.plist AppleEnabledInputSources -array-add '{ "InputSourceKind" = "Keyboard Layout"; "KeyboardLayout ID" = "com.apple.keylayout.BrazilianABNT2"; "KeyboardLayout Name" = "Portuguese - Brazil"; }'
-sudo rm ~/Library/Preferences/com.apple.HIToolbox.plist && killall Finder && cfprefsd
+
 
 
 
