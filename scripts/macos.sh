@@ -14,7 +14,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # General UI/UX                                                               #
 ###############################################################################
 defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
-defaults write com.apple.finder "ShowPathbar" -bool "true" 
+ defaults write com.apple.finder "ShowPathbar" -bool "true" 
 defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
 defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1" && killall Finder
 defaults write com.apple.finder "CreateDesktop" -bool "false" && killall Finder
@@ -196,7 +196,7 @@ defaults write com.apple.commerce AutoUpdate -bool false
 # Install system data files and security updates
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInstall -bool true
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
-
-
+# Dock 
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
 # Finish
 echo_success "macOS settings updated."
