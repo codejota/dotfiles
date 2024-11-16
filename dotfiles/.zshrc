@@ -132,3 +132,21 @@ export PATH=$PATH:/Library/PostgreSQL/17/bin
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/opt/python@3.12/bin:$PATH"
 export PATH="/opt/homebrew/opt/python@3.12/bin:$PATH"
+
+export PNPM_HOME="/Users/jota/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# aliases 
+ccm() {
+  git diff | cody chat --stdin -m 'Write a commit message for this diff:'
+}
+# pnpm
+export PNPM_HOME="/Users/jota/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
