@@ -4,7 +4,7 @@
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+fi 
 # --------------------------- Paths ------------------------------------
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -95,7 +95,7 @@ alias zshcfg="code ~/.zshrc"
 . "$HOME/.asdf/completions/asdf.bash"
 
 
-PATH=~/.console-ninja/.bin:$PATH
+
 
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
@@ -132,6 +132,10 @@ export PATH=$PATH:/Library/PostgreSQL/17/bin
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/opt/python@3.12/bin:$PATH"
 export PATH="/opt/homebrew/opt/python@3.12/bin:$PATH"
+export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+
 
 export PNPM_HOME="/Users/jota/Library/pnpm"
 case ":$PATH:" in
