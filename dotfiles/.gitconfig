@@ -5,7 +5,7 @@
 	clean = git-lfs clean -- %f
 [user]
 	name = codejota
-	email = contato@jotacode.dev
+	email = 
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
