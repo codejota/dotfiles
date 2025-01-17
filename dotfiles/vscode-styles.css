@@ -1,0 +1,55 @@
+.activity-bar {
+  position: fixed;
+  bottom: 0;
+  height: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.menubar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.titlebar {
+  -webkit-app-region: drag;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.statusbar {
+  position: fixed;
+  bottom: 0;
+  height: 18px;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs-container .tab.sizing-fit {
+  border-radius: 0px 10px 0px 0px !important;
+}
+
+.title-label>h2,
+.title-label,
+.titlebar-center {
+  display: none !important;
+}
+
+.monaco-list-row {
+  height: 14px;
+  font-size: 12px;
+}
+
+.monaco-editor-background {
+  background-color: transparent !important;
+
+}
