@@ -7,8 +7,16 @@ source ./scripts/user.sh
 # Global variables
 DOTFILES_DIRECTORY="$PWD"
 
-# Homebrew path for Apple Silicon
-export PATH="/opt/homebrew/bin:$PATH"
+ARCH=$(uname -m)
+if [[ "$ARCH" == "arm64" ]]; then
+  # Apple Silicon (M1/M2/M3)
+  HOMEBREW_PREFIX="/opt/homebrew"
+else
+  # Intel (Hackintosh/Macs Antigos)
+  HOMEBREW_PREFIX="/usr/local"
+fi
+
+ export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 
 # Info message
 echo_info() {
@@ -32,4 +40,3 @@ echo_warning() {
 replace() {
   cp -f "${DOTFILES_DIRECTORY}/${1}" "${HOME}/${2}"
 }
-.
